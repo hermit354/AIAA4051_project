@@ -1,0 +1,147 @@
+# Python cache and test artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+.ipynb_checkpoints/
+
+# Virtual environments and local package state
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+!.env.example
+
+# Local IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local Codex/tooling state
+.codex
+.codex/
+.agents/
+INTERVIEW_GUIDE.md
+
+# Local scratch or unrelated experiment files
+test.py
+overall.md
+plan.md
+process.md
+report_figure_plan.md
+report.md
+project3_instructions.md
+poster_claude_design_prompt*.md
+poster_claude_design_inputs/
+resources/skills/
+resources/report/
+resources/nips/
+*.tex
+*.bib
+
+# Local secrets and API credentials
+*.key
+*.pem
+*.secret
+secrets/
+credentials/
+api_keys/
+
+# Downloaded base models: never commit model repositories to GitHub.
+source_models/
+
+# Model weights and binary model exports anywhere in the tree.
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.msgpack
+*.onnx
+*.tflite
+*.h5
+*.ot
+
+# Runtime logs, process ids, and scratch output.
+*.log
+*.pid
+nohup.out
+tmux-*.log
+**/logs/
+
+# LaTeX build artifacts.
+*.aux
+*.blg
+*.bbl
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+
+# Training checkpoints and Hugging Face trainer state.
+**/checkpoint-*/
+**/optimizer.pt
+**/scheduler.pt
+**/trainer_state.json
+**/rng_state*.pth
+
+# Keep code, docs, tables, summaries, and metrics.
+# Exclude bulky per-example prediction dumps from outputs; they are reproducible
+# and make the repository hard to clone.
+outputs/**
+
+# Curated lightweight result summaries for GitHub.
+results/
+!results/
+!results/README.md
+!results/*.csv
+!results/*.json
+
+# Generated report and presentation artifacts are reproducible from scripts and
+# lightweight summaries. Keep source files, figure scripts, and result tables.
+poster_assets/**
+success_rate_by_split.png
+resources/report/**/*.png
+resources/report/**/*.pdf
+
+# Exclude repeated tokenizer/model export files inside outputs. Metrics/configs
+# needed for analysis are small and remain tracked unless ignored elsewhere.
+outputs/**/tokenizer.json
+outputs/**/tokenizer_config.json
+outputs/**/special_tokens_map.json
+outputs/**/spiece.model
+outputs/**/vocab.json
+outputs/**/merges.txt
+outputs/**/generation_config.json
+
+# Raw upstream datasets should be downloaded locally, not committed.
+data/raw/ppnl_single_goal/
+data/raw/ppnl_single_goal_original/
+
+# Generated data: do not commit full generated datasets. Keep only the
+# hand-picked README samples under data/samples/.
+data/generated/**
+
+# Small hand-picked examples used by README commands.
+!data/samples/
+!data/samples/**
+
+# Generic caches and temporary files
+*.cache
+**/.cache/
+*.tmp
+*.temp
+*.bak
+*.swp

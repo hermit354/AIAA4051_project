@@ -1,0 +1,3 @@
+{"id": "sample_easy_success", "model_output": "right right right"}
+{"id": "sample_obstacle_success", "model_output": "down down right right"}
+{"id": "sample_invalid_failure", "model_output": "down right right"}
