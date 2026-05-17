@@ -58,6 +58,7 @@ Phase 2 contains the main experimental variations. It converts Phase 0 data into
 ├── scripts/         # Reproducible experiment launchers and figure scripts
 ├── data/samples/    # Minimal examples for quick evaluator checks
 ├── results/         # Lightweight result summaries
+├── DATA_CARD.md     # Full generated-data hosting and download instructions
 ├── outputs/         # Local experiment outputs; most files are ignored
 ├── .gitignore       # Prevents models, checkpoints, logs, secrets, and large data from being committed
 └── requirements.txt # Minimal Python dependencies
@@ -66,6 +67,19 @@ Phase 2 contains the main experimental variations. It converts Phase 0 data into
 Large local directories such as `source_models/`, full `outputs/`, checkpoints, logs, raw datasets, report drafts, LaTeX files, and poster assets are intentionally excluded from version control.
 
 For a detailed end-to-end map of every code module, dataset location, result artifact, and experiment launcher, see [`WORKFLOW.md`](WORKFLOW.md).
+
+## Data Access
+Small examples are tracked in `data/samples/` and are enough to run the evaluator smoke test below.
+
+Full generated experiment inputs are hosted externally because the report-scale generated datasets are several gigabytes and include JSONL files larger than regular GitHub file-size limits. See [`DATA_CARD.md`](DATA_CARD.md) for the hosted dataset layout, package list, checksums, and download policy.
+
+After the Hugging Face Dataset repository has been populated, download the full generated inputs with:
+
+```bash
+bash scripts/download_data.sh
+```
+
+The script downloads `ouy-not-reversed/aiaa4051-path-planning-data` by default and extracts the archives into `data/generated/`. Override `HF_DATASET_REPO`, `DOWNLOAD_DIR`, `TARGET_ROOT`, or `PYTHON_BIN` if needed.
 
 ## Installation
 Python 3.10 or later is recommended.

@@ -33,6 +33,8 @@ Thumbs.db
 .codex/
 .agents/
 INTERVIEW_GUIDE.md
+REPORT_INTERVIEW_TRACEABILITY.md
+final_report_traceability_checklist.md
 
 # Local scratch or unrelated experiment files
 test.py
@@ -133,6 +135,10 @@ data/raw/ppnl_single_goal_original/
 # Generated data: do not commit full generated datasets. Keep only the
 # hand-picked README samples under data/samples/.
 data/generated/**
+
+# External dataset staging/download directories for Hugging Face data hosting.
+hf_dataset_artifacts/
+data_external/
 
 # Small hand-picked examples used by README commands.
 !data/samples/

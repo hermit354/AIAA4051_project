@@ -4,3 +4,4 @@ tqdm
 matplotlib
 numpy
 httpx
+huggingface_hub
